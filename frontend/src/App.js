@@ -17,12 +17,6 @@ import {ApolloClient} from "apollo-client"
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import gql from 'graphql-tag';
 import './App.css';
-import { 
-  makeExecutableSchema,
-  addMockFunctionsToSchema
-} from 'graphql-tools';
-import { typeDefs } from './schema';
-import GraphQLJSON from 'graphql-type-json';
 import { createUploadLink } from 'apollo-upload-client';
 
 import Table from '@material-ui/core/Table';
@@ -33,11 +27,6 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-
-
-const schema = makeExecutableSchema({ typeDefs });
-addMockFunctionsToSchema({ schema });
-
 
 
 function Copyright() {
